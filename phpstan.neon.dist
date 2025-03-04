@@ -2,9 +2,6 @@ includes:
     - vendor/larastan/larastan/extension.neon
 
 parameters:
-    ignoreErrors:
-        -
-            identifier: property.notFound
     level: 5
     paths:
         - src
