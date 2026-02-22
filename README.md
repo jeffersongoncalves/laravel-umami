@@ -26,16 +26,17 @@ Install the package via composer:
 composer require jeffersongoncalves/laravel-umami
 ```
 
-Run the migrations to create the Umami settings in your database:
+If you haven't already, publish the `spatie/laravel-settings` migration to create the `settings` table:
 
 ```bash
-php artisan migrate
+php artisan vendor:publish --provider="Spatie\LaravelSettings\LaravelSettingsServiceProvider" --tag="migrations"
 ```
 
-Optionally, you can publish the settings migration to customize defaults:
+Then publish and run the Umami settings migration:
 
 ```bash
 php artisan vendor:publish --tag=umami-settings-migrations
+php artisan migrate
 ```
 
 ## Usage
