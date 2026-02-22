@@ -12,27 +12,65 @@
 
 This Laravel package seamlessly integrates Umami analytics into your Blade templates. Easily track website visits and user engagement directly within your Laravel application, providing valuable insights into your website's performance. This package simplifies the integration process, saving you time and effort. With minimal configuration, you can leverage Umami's powerful analytics features to gain a clearer understanding of your audience and website usage.
 
+## Requirements
+
+- PHP 8.2+
+- Laravel 11+
+- [spatie/laravel-settings](https://github.com/spatie/laravel-settings) configured (the `settings` table must exist)
+
 ## Installation
 
-You can install the package via composer:
+Install the package via composer:
 
 ```bash
 composer require jeffersongoncalves/laravel-umami
 ```
 
-## Usage
-
-Publish config file.
+Run the migrations to create the Umami settings in your database:
 
 ```bash
-php artisan vendor:publish --tag=umami-config
+php artisan migrate
 ```
 
-Add head template.
+Optionally, you can publish the settings migration to customize defaults:
 
-```php
+```bash
+php artisan vendor:publish --tag=umami-settings-migrations
+```
+
+## Usage
+
+Add the Umami script to your Blade layout (typically in the `<head>` section):
+
+```blade
 @include('umami::script')
 ```
+
+### Configuring Settings
+
+Settings are stored in the database and can be managed via code:
+
+```php
+use JeffersonGoncalves\Umami\Settings\UmamiSettings;
+
+$settings = app(UmamiSettings::class);
+$settings->website_id = 'your-website-id';
+$settings->host_analytics = 'https://your-umami-instance.com';
+$settings->save();
+```
+
+### Available Settings
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `website_id` | `?string` | `null` | Your Umami website ID (required for tracking) |
+| `host_analytics` | `string` | `https://cloud.umami.is` | URL of your Umami instance |
+| `host_url` | `?string` | `null` | Override data destination URL |
+| `auto_track` | `bool` | `true` | Automatically track pageviews and events |
+| `domains` | `?string` | `null` | Comma-delimited list of allowed domains |
+| `tag` | `?string` | `null` | Tag to group events in the dashboard |
+| `exclude_search` | `bool` | `false` | Exclude search parameters from URL |
+| `exclude_hash` | `bool` | `false` | Exclude hash value from URL |
 
 ## Testing
 
@@ -54,7 +92,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Jèfferson Gonçalves](https://github.com/jeffersongoncalves)
+- [Jefferson Goncalves](https://github.com/jeffersongoncalves)
 - [All Contributors](../../contributors)
 
 ## License
