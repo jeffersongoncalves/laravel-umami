@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.0.1 - 2026-02-22
+
+### Fixed
+
+- Added missing `spatie/laravel-settings` migration step to README installation guide
+
 ## v2.0.0 - 2026-02-22
 
 ### Breaking Changes
@@ -24,8 +30,8 @@ $settings = app(UmamiSettings::class);
 $settings->website_id = 'your-website-id';
 $settings->host_analytics = 'https://your-umami-instance.com';
 $settings->save();
-```
 
+```
 ### What's Changed
 
 - Removed `config/umami.php` and all `env()` reads
