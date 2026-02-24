@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.0.2 - 2026-02-24
+
+### What's Changed
+
+- Add Laravel 13.x support in composer.json
+- Add orchestra/testbench ^11.0 for Laravel 13 testing
+
 ## v2.0.1 - 2026-02-22
 
 ### Fixed
@@ -30,6 +37,7 @@ $settings = app(UmamiSettings::class);
 $settings->website_id = 'your-website-id';
 $settings->host_analytics = 'https://your-umami-instance.com';
 $settings->save();
+
 
 ```
 ### What's Changed
