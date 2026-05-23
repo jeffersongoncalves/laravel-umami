@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.0.4 - 2026-05-23
+
+**Full Changelog**: https://github.com/jeffersongoncalves/laravel-umami/compare/v2.0.3...v2.0.4
+
 ## v2.0.3 - 2026-04-26
 
 ### What's Changed
@@ -46,6 +50,7 @@ $settings = app(UmamiSettings::class);
 $settings->website_id = 'your-website-id';
 $settings->host_analytics = 'https://your-umami-instance.com';
 $settings->save();
+
 
 
 
