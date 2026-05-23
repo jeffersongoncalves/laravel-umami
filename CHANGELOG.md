@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.0.3 - 2026-04-26
+
+### What's Changed
+
+* Bump ramsey/composer-install from 3 to 4 by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-umami/pull/12
+* Bump dependabot/fetch-metadata from 2.5.0 to 3.0.0 by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-umami/pull/13
+
+**Full Changelog**: https://github.com/jeffersongoncalves/laravel-umami/compare/v2.0.2...v2.0.3
+
 ## v2.0.2 - 2026-02-24
 
 ### What's Changed
@@ -37,6 +46,7 @@ $settings = app(UmamiSettings::class);
 $settings->website_id = 'your-website-id';
 $settings->host_analytics = 'https://your-umami-instance.com';
 $settings->save();
+
 
 
 ```
