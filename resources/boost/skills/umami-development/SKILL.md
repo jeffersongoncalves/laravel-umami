@@ -17,7 +17,7 @@ description: Development guide for the laravel-umami package -- Umami Analytics 
 
 ### Requirements
 
-- PHP 8.2 or 8.3
+- PHP 8.2, 8.3, or 8.4
 - Laravel 11, 12, or 13
 - `spatie/laravel-settings` ^3.3
 - `spatie/laravel-package-tools` ^1.14.0
