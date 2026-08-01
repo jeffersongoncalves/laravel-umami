@@ -30,8 +30,8 @@ class UmamiServiceProvider extends PackageServiceProvider
         parent::packageBooted();
 
         Config::set('settings.migrations_paths', array_merge(
-            Config::get('settings.migrations_paths', []),
-            [__DIR__.'/../database/settings']
+            [__DIR__.'/../database/settings'],
+            Config::get('settings.migrations_paths', [])
         ));
 
         $this->publishes([
