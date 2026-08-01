@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.0.5 - 2026-08-01
+
+### What's Changed
+
+* chore(deps): bump actions/checkout from 6 to 7 by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-umami/pull/14
+* chore(deps): bump actions/checkout from 6 to 7 by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-umami/pull/15
+
+**Full Changelog**: https://github.com/jeffersongoncalves/laravel-umami/compare/v2.0.4...v2.0.5
+
 ## v2.0.4 - 2026-05-23
 
 **Full Changelog**: https://github.com/jeffersongoncalves/laravel-umami/compare/v2.0.3...v2.0.4
@@ -50,6 +59,7 @@ $settings = app(UmamiSettings::class);
 $settings->website_id = 'your-website-id';
 $settings->host_analytics = 'https://your-umami-instance.com';
 $settings->save();
+
 
 
 
