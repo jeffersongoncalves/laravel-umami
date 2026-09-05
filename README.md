@@ -6,6 +6,8 @@
 
 # Laravel Umami
 
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support-FFDD00?style=flat-square&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jeffersongoncalves)
+
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/jeffersongoncalves/laravel-umami.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/laravel-umami)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/laravel-umami/fix-php-code-style-issues.yml?branch=master&label=code%20style&style=flat-square)](https://github.com/jeffersongoncalves/laravel-umami/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/jeffersongoncalves/laravel-umami.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/laravel-umami)
