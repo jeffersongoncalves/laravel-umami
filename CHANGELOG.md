@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v3.1.0 - 2026-10-09
+
+- Every `<script>` rendered by the package carries Laravel's Vite CSP nonce when the app sets one (e.g. via laravel-security-headers), so nonce-based `script-src` policies work without `'unsafe-inline'`.
+
 ## v3.0.0 - 2026-08-01
 
 ### Security
@@ -70,6 +74,7 @@ $settings = app(UmamiSettings::class);
 $settings->website_id = 'your-website-id';
 $settings->host_analytics = 'https://your-umami-instance.com';
 $settings->save();
+
 
 
 
